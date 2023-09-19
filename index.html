@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice</title>
+</head>
+
+<body>
+    <h1>Ma Calculatrice</h1>
+    <script>
+        function calculate ( firstValue, operator, secondValue )
+        {
+            let result = 0;
+            if ( operator === "+" )
+            {
+                result = parseInt( firstValue ) + parseInt( secondValue );
+            } else if ( operator === "-" )
+            {
+                result = parseInt( firstValue ) - parseInt( secondValue );
+            } else if ( operator === "/" )
+            {
+                result = parseInt( firstValue ) / parseInt( secondValue );
+            } else if ( operator === "*" )
+            {
+                result = parseInt( firstValue ) * parseInt( secondValue );
+            } else
+            {
+                result = "Opérateur non valide";
+            }
+            return result;
+        }
+
+        // Créez 3 variables 
+        let firstValue = 1;
+        let operator = "/";
+        let secondValue = 2;
+        firstValue = prompt( "Saisir le premier nombre ?" );
+        secondValue = prompt( "Saisir le second nombre ?" );
+
+        console.log( calculate( firstValue, operator, secondValue ) )
+    </script>
+</body>
+
+</html>
